@@ -1,0 +1,17 @@
+București Cluj-Napoca 6 0.03 0.12 0.50 2.00 8.00 32.00
+Cluj-Napoca Timișoara 3 8.00 2.00 2.00
+Timișoara Iași 2 8.00 32.00
+Paris Lyon 8 0.00 0.00 0.03 0.12 0.50 2.00 8.00 32.00
+Lyon Marseille 3 8.00 2.00 0.50
+Marseille Nice 2 0.12 0.03
+Berlin Hamburg 6 0.03 0.12 0.50 2.00 8.00 32.00
+Hamburg Frankfurt 3 8.00 2.00 2.00
+Frankfurt Munchen 2 2.00 0.50
+Frankfurt Essen 2 8.00 32.00
+Madrid Barcelona 6 0.03 0.12 0.50 2.00 8.00 32.00
+Barcelona Valencia 3 8.00 2.00 0.50
+Valencia Sevilla 2 0.12 0.03
+Roma Milano 6 0.03 0.12 0.50 2.00 8.00 32.00
+Milano Napoli 3 8.00 2.00 0.50
+Napoli Genova 2 0.12 0.03
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16

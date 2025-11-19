@@ -1,0 +1,20 @@
+16
+5
+30
+București Cluj-Napoca 6 0 0 0 0 0 1
+Cluj-Napoca Timișoara 3 0 0 0
+Timișoara Iași 2 0 1
+Paris Lyon 8 0 0 0 0 0 0 0 1
+Lyon Marseille 3 0 0 0
+Marseille Nice 2 0 0
+Berlin Hamburg 6 0 0 0 0 0 1
+Hamburg Frankfurt 3 0 0 0
+Frankfurt Munchen 2 0 0
+Frankfurt Essen 2 0 1
+Madrid Barcelona 6 0 0 0 0 0 1
+Barcelona Valencia 3 0 0 0
+Valencia Sevilla 2 0 0
+Roma Milano 6 0 0 0 0 0 1
+Milano Napoli 3 0 0 0
+Napoli Genova 2 0 0
+

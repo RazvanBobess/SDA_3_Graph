@@ -1,0 +1,46 @@
+/*Bobes_Razvan-315CB*/
+
+Task 1 : 
+    ...
+
+Task 2 :
+    Am creat o structura de tip TGraph care contine :
+        int n -> numarul de orase de unde pleaca trenul (orasele sunt distincte)
+        int orase -> numarul total de orase distincte
+        TSinGraph *x -> structura care retine numele orasului destinatie, valoarea de cost si pointer catre urmatorul oras
+    
+    Am definit urmatoarele functii :
+        TGraph *AlocareGraph(int n); -> aloca o zona de memorie pentru fiecare drum care este citit
+        
+        void DistrugeGraph(TGraph **aL); -> sterge din memorie zona alocata pentru graf
+        
+        TGraph *CitireElementeGraph(char **vizitat, int *nr_drumuri, FILE *input, char **sursa_oras, char **destinatie_oras, int *costuri_drumuri);
+            -> functie de citire din fisierul de intrare a fiecarui oras sursa, oras destinatie si cost drum
+            -> in vectorul sursa_oras -> voi salva fiecare nume de oras de start (numele oraselor se pot repeta)
+            -> in vectorul destinatie_oras -> voi salva fiecare nume de oras destinatie din fisierul de input (in ordinea in care apar)
+            -> vectorul de costuri_drumuri -> voi salva fiecare cost din fisierul de intrare
+            -> vectorul vizitat -> voi retine numele fiecarui oras (numele o sa apara doar o singura data)
+            -> in functie, la final voi elibera din memorie zonele care nu au fost ocupate (din graful creat si din vectorul vizitat)
+        
+        void AfisareGraph(TGraph *aL, FILE *output, char **vizitat);  -> functie auxiliara creata pentru a ma verifica daca datele au fost retinute corect in           
+                                                                        graful creat si in vectorul de vizite
+
+        void SelectareDrumMinim(TGraph *aL, FILE *output, char **vizitat, char *start, int nr_drumuri, char **sursa_oras, char **destinatie_oras, int *costuri_drumuri);
+            -> functia care primeste ca parametru un oras de start 
+            -> am creat 3 vectori :
+                d_cost -> retine valoarea minima pentru fiecare oras
+                Q -> verifica daca am trecut printr-un oras
+                parinte -> retine numele fiecarui oras parinte,
+            -> pentru orasul de start, d_cost este egal cu 0
+            -> parcurgerea se face pentru fiecare oras in parte,
+            -> la fiecare parcurgere, se cauta costul minim pentru a ajunge intr-un anumit oras
+            -> vectorul d_cost se modifica la fiecare parcurgere, astfel : daca la orasul cu indexul i se gaseste un alt drum mai ieftin, atunci acesta primeste valoarea
+            minima si vectorul de parinte se schimba
+            -> In final, voi afisa in ordinea in care apar in fisierul de input datele
+
+    In main :
+        ->deschid fisierele de input
+        ->declar variabilele : TGraph drumuri, char **vizitat, char **sursa, char **destinatie, char *costuri
+        ->citesc din fisierul de input orasul de start, numarul maxim de drumuri pe care le pot salva si numarul efectiv de drumuri pe care le citesc
+        ->apelez functiile de citire si de cautare a drumului minim
+        ->eliberez din memorie elementele pe care le-am creat 
